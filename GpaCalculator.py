@@ -25,6 +25,7 @@ class GpaCalculator():
         i=1
         for course in self.courses:
             if course.getCourseType():
+				#检查是否为选修课
                 continue
             hour+=float(course.gethour())
             gradePoint=self.__computeGP(course.getscore())

@@ -24,6 +24,8 @@ class GpaCalculator():
         sxh=float(0)
         i=1
         for course in self.courses:
+            if course.getCourseType():
+                continue
             hour+=float(course.gethour())
             gradePoint=self.__computeGP(course.getscore())
             sxh+=course.gethour()*gradePoint

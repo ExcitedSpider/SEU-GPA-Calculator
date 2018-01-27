@@ -41,3 +41,11 @@ class Course():
         else:
             #other char score, treat as '及格'
             return 60
+
+    def getCourseType(self):
+        if len(self.__infos)==7:
+            #如果长度为7，说明有备注，说明不是必修课
+            #返回False
+            return False
+        else:
+            return True
